@@ -19,7 +19,8 @@ contract PaymentProcessor {
     }
 
     function pay(uint amount, uint paymentId) external {
-        dai.transferFrom(msg.sender, admin, amount);
-        emit PaymentDone(msg.sender, amount, paymentId, block.timestamp)
+       dai.transferFrom(msg.sender, admin, amount);
+        emit PaymentDone(msg.sender, amount, paymentId, block.timestamp);
     }
+    
 }
