@@ -7,6 +7,7 @@ todo:
 - add pictures for items to buy
 - show download url
 - security (can currently read paymentid from smart contract on blockchain)
+
 used:
 
 backend framework, koa (can use async/await)
