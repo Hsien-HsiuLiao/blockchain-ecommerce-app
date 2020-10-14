@@ -21,7 +21,7 @@ function Store({ paymentProcessor, dai }) {
         const tx1 = await dai.approve(paymentProcessor.address, item.price);
         await tx1.wait();
 
-        const tx2 = await paymentProcessor.apy(item.price, response1.data.paymentId);
+        const tx2 = await paymentProcessor.pay(item.price, response1.data.paymentId);
         await tx2.wait();
 
         await new Promise(resolve => setTimeout(resolve, 5000));
