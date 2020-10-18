@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 //import { ethers } from 'ethers';
 //import axios from 'axios';
+import './Audius.css';
 import { Button } from '@audius/stems';
+import MusicPlayer from './MusicPlayer.js';
 
 const selectHost = async () => {
     const sample = (arr) => arr[Math.floor(Math.random() * arr.length)]
@@ -78,6 +80,8 @@ function Audius() {
         onClick={onPause}>
             Pause
             </button>
+        <MusicPlayer />
+
     </div>
     
     )
