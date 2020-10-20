@@ -1,32 +1,28 @@
 import React from 'react';
 
 // import { css, jsx } from '@emotion/core'
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
-//const Content = ({ children }) => (
-//  <div
-//    className="Content"
+const Content = ({ children }) => (
+  <div
+    className="Content"
+    style={ContentStyle}
   //   css={css`
    //   width: calc(100% - 200px);
    //   padding: 20px;
    //   background: #121212;
    // `}
     
-//  >
-//    {children}
-//  </div>
-// )
+  >
+    {children}
+  </div>
+ )
 
-function Content() { 
+const ContentStyle = {
+      width: "calc(100% - 200px)",
+      padding: "20px",
+      background: "#121212",
 
-
-    return  (
-        
-        <div>
-          Content
-        </div>
-    
-    )
 }
 
 
