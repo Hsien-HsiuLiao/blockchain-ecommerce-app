@@ -1,21 +1,42 @@
 import React, { useCallback, useEffect, useState } from 'react';
 //import axios from 'axios';
 import { Button } from '@audius/stems';
-import Topbar from './components/Topbar'
-import Sidebar from './components/Sidebar'
-import Content from './components/Content.js'
-import Playbar from './components/Playbar.js'
+import Header from './components/graphics/Header'
+import Graphics from './components/graphics/Graphics'
+import Playlist from './components/playlist/Playlist'
+import Actions from './components/playlist/Actions'
+import Controls from './components/Controls'
 
+import PlayerState from './context/PlayerState'
+
+
+import './main.css'
+import './input.css'
 
 function MusicPlayer() { 
 
     return  (        
-        <div>
-          <Topbar />
-          <Sidebar />
-          <Content />  
-          <Playbar /> 
+   /*     <div>
+          Music Player
+     */     
+    <PlayerState>
+      <div className="main">
+        <div className="top">
+          <div className="left">
+            <Header />   
+            <Graphics />
+          </div>
+         <div className="right">
+            <Actions />
+            <Playlist />
+           </div>
         </div>
+       <Controls />
+      </div>
+       </PlayerState>
+ /*
+        </div>
+        */
     )
 }
 
