@@ -29,14 +29,18 @@ function App() {
     )
   }
   return (
-    <div className='container'>
+    <div className='container' style={appStyle}>
       <div className='col-sm-12'>
         <h1>Blockchain Ecommerce App</h1>
-        <Audius />
         <Store paymentProcessor={paymentProcessor} dai={dai} />
+        <Audius />
       </div>
     </div>
   );
+}
+
+const appStyle = {
+  backgroundColor: "powderblue"
 }
 
 export default App;

@@ -13,7 +13,7 @@ import PlayerState from './context/PlayerState'
 import './main.css'
 import './input.css'
 
-function MusicPlayer() { 
+function MusicPlayer(props) { 
 
     return  (        
    /*     <div>
@@ -24,14 +24,14 @@ function MusicPlayer() {
         <div className="top">
           <div className="left">
             <Header />   
-            <Graphics />
+            <Graphics artwork={props.artwork}/>
           </div>
          <div className="right">
             <Actions />
             <Playlist />
            </div>
         </div>
-       <Controls />
+       <Controls audio={props.audio} />
       </div>
        </PlayerState>
  /*

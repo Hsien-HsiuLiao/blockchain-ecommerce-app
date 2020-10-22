@@ -1,9 +1,12 @@
+import { Button } from '@audius/stems';
+import '@audius/stems/dist/stems.css'
 import React, { useCallback, useEffect, useState } from 'react';
 //import { ethers } from 'ethers';
 //import axios from 'axios';
+
+import MusicPlayer from './musicplayer//MusicPlayer.js';
+
 import './Audius.css';
-import { Button } from '@audius/stems';
-import MusicPlayer from './MusicPlayer.js';
 
 const selectHost = async () => {
     const sample = (arr) => arr[Math.floor(Math.random() * arr.length)]
@@ -55,18 +58,21 @@ function Audius() {
         }
       }, [audio])
 
+      console.log("audio: ", audio);
+
     return track && (
         
         <div className="topTrack">
-            
+{/*           
       <div className="artwork">
         <img src={track.artwork['150x150']} alt='artwork' />
       </div>
+    */}
       <div className="title">
         { track.title }
       </div>
       <div className="artist">
-        { track.user.name }
+        Artist: { track.user.name }
       </div>
       <div className="location">
         { track.user.location }
@@ -74,13 +80,13 @@ function Audius() {
       <Button 
         text='Play Track'
         onClick={onPlay} />
-            
-            <button 
+       {/* <Button className="fa fa-play fa-xs" style="font-size: 25px;" />
+        */}
+            <Button 
         text='Pause Track'
-        onClick={onPause}>
-            Pause
-            </button>
-        <MusicPlayer />
+        onClick={onPause} />
+
+        <MusicPlayer artwork={track.artwork['150x150']} audio={audio} />
     </div>
     
     )

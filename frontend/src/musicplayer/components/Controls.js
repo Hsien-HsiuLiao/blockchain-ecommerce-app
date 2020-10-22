@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import playerContext from '../context/playerContext'
 
-function Controls() {
+function Controls(props) {
 
   // Global State
   const {
@@ -20,6 +20,8 @@ function Controls() {
   } = useContext(playerContext)
 
   const audio = useRef('audio_tag');
+  //console.log("props.audio: ",props.audio)
+  //const audio = props.audio;
 
   // self State
   const [statevolum, setStateVolum] = useState(0.3)
