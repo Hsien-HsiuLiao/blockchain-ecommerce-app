@@ -1,5 +1,5 @@
 import { Button } from '@audius/stems';
-import '@audius/stems/dist/stems.css'
+import '@audius/stems/dist/stems.css';
 import React, { useCallback, useEffect, useState } from 'react';
 //import { ethers } from 'ethers';
 //import axios from 'axios';
@@ -67,10 +67,11 @@ function Audius() {
       <div className="artwork">
         <img src={track.artwork['150x150']} alt='artwork' />
       </div>
-    */}
+    
       <div className="title">
         { track.title }
       </div>
+      */}
       <div className="artist">
         Artist: { track.user.name }
       </div>
@@ -86,7 +87,7 @@ function Audius() {
         text='Pause Track'
         onClick={onPause} />
 
-        <MusicPlayer artwork={track.artwork['150x150']} audio={audio} />
+        <MusicPlayer artwork={track.artwork['150x150']} audio={audio} song={track.title} />
     </div>
     
     )

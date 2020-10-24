@@ -23,7 +23,7 @@ function MusicPlayer(props) {
       <div className="main">
         <div className="top">
           <div className="left">
-            <Header />   
+            <Header song={props.song}/>   
             <Graphics artwork={props.artwork}/>
           </div>
          <div className="right">

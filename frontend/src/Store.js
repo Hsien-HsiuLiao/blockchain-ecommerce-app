@@ -2,6 +2,9 @@ import React from 'react';
 import { ethers } from 'ethers';
 import axios from 'axios';
 
+import { Button } from '@audius/stems';
+import '@audius/stems/dist/stems.css';
+
 const API_URL = 'http://localhost:4000';
 
 const ITEMS = [
@@ -34,13 +37,15 @@ function Store({ paymentProcessor, dai }) {
         <ul className='list-group'>
             <li className='list-group-item'>
                 Buy Item1 - <span className='front-weight-bold'>100 DAI</span>
-                <button
-                    type='button'
-                    className='btn btn-primary float-right'
+                <Button
+          /*          type='button'
+                    className='btn btn-primary float-right'   */
+                    className='float-right'
                     onClick={() => buy(ITEMS[0])}
+                    text='Buy'
                 >
                 Buy
-                </button>
+                </Button>
             </li>
             <li className='list-group-item'>
                 Buy Item2 - <span className='front-weight-bold'>200 DAI</span>
