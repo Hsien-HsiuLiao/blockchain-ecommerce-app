@@ -49,13 +49,11 @@ function Store({ paymentProcessor, dai }) {
             </li>
             <li className='list-group-item'>
                 Buy Item2 - <span className='front-weight-bold'>200 DAI</span>
-                <button
-                    type='button'
-                    className='btn btn-primary float-right'
+                <Button
+                    className='float-right'
                     onClick={() => buy(ITEMS[1])}
-                >
-                Buy
-                </button>
+                    text='Buy'
+                />
             </li>
         </ul>
     )
