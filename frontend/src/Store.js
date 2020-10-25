@@ -36,7 +36,7 @@ function Store({ paymentProcessor, dai }) {
     return (
         <ul className='list-group'>
             <li className='list-group-item'>
-                Buy Item1 - <span className='front-weight-bold'>100 DAI</span>
+                Buy Song1 - <span className='front-weight-bold'>100 DAI</span>
                 <Button
           /*          type='button'
                     className='btn btn-primary float-right'   */
@@ -48,7 +48,7 @@ function Store({ paymentProcessor, dai }) {
                 </Button>
             </li>
             <li className='list-group-item'>
-                Buy Item2 - <span className='front-weight-bold'>200 DAI</span>
+                Buy Song2 - <span className='front-weight-bold'>200 DAI</span>
                 <Button
                     className='float-right'
                     onClick={() => buy(ITEMS[1])}
