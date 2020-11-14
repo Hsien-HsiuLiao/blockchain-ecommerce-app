@@ -12,6 +12,17 @@ used:
 
 backend framework, koa (can use async/await)
 
+## Testing
+
+`truffle develop`
+
+`cd backend`
+
+`node server.js`
+
+`cd frontend`
+
+`npm start`
 
 >push an existing repository from the command line
 
