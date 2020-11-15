@@ -6,6 +6,7 @@ const Dai = artifacts.require('Dai.sol');
 contract('PaymentProcessor', (accounts) => {
     let paymentProcessor;
     const admin = accounts[0];
+    const payer = accounts[1];
     
 
     beforeEach( async() => {
@@ -13,17 +14,19 @@ contract('PaymentProcessor', (accounts) => {
         const dai = await Dai.new();
         const amount = web3.utils.toWei('100');
        
-        await dai.faucet(accounts[1], amount)
+        await dai.faucet(payer, amount);
+        //     await deployer.deploy(PaymentProcessor, admin, dai.address);
+
         paymentProcessor = await PaymentProcessor.new(admin, dai.address);
         //console.log(paymentProcessor);
     });
 
     it('pay function - should transfer money from the buyer to the admin', async () => {
-       const price = web3.utils.toWei('10');
+       const price = web3.utils.toWei('10', 'ether');
        
-        console.log(accounts[1]);
+        console.log(payer);
         const id = 1;
-       await paymentProcessor.pay(price, id, {from: accounts[2], to: admin});
+       await paymentProcessor.pay(price, id, {from: payer});
 //       assert(100 === 100)
 
     })
