@@ -6,9 +6,12 @@ module.exports = async function (deployer, network, addresses) {
 
 //if(network === 'develop') {
  if(network === 'develop' || network === 'test') {
+    // console.log("deploy")
      await deployer.deploy(Dai);
      const dai = await Dai.deployed();
-     await dai.faucet(payer, web3.utils.toWei('10000'));
+     
+     await dai.faucet(payer, web3.utils.toWei('17000'));
+     //console.log("payer balance: ", await web3.eth.getBalance(payer));
 
      await deployer.deploy(PaymentProcessor, admin, dai.address);
      }
