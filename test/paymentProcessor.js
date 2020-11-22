@@ -1,5 +1,3 @@
-//const _deploy_contracts = require("../migrations/2_deploy_contracts");
-
 const PaymentProcessor = artifacts.require('PaymentProcessor.sol');
 const Dai = artifacts.require('Dai.sol');
 
@@ -41,7 +39,7 @@ contract('PaymentProcessor', (accounts) => {
        console.log("balance paymentProcessor: ", await web3.eth.getBalance(paymentProcessor.address));
        console.log("price approval: ", price)
        const tx1 = await dai.approve(paymentProcessor.address, price);
-       // console.log("tx1: ",tx1)
+        console.log("tx1: ",tx1)
          // await tx1.wait();
          console.log("payer balance: ", await web3.eth.getBalance(payer));
         const payerBefore = await web3.eth.getBalance(payer);

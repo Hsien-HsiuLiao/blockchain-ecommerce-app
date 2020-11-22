@@ -17,7 +17,8 @@ contract PaymentProcessor {
         admin = adminAddress;
         dai = IERC20(daiAddress);
     }
-
+    /// @param amount Amount of DAI to send to the admin
+    /// @param paymentId ID to track payment
     function pay(uint amount, uint paymentId) external {
        dai.transferFrom(msg.sender, admin, amount);
         emit PaymentDone(msg.sender, amount, paymentId, block.timestamp);
