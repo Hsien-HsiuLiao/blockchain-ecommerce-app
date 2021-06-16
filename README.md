@@ -1,16 +1,22 @@
 # blockchain e-commerce app
 
-todo:
+## Summary 
+
+Accepts ERC-20 Stablecoin token (DAI) for payment
+
+### To do:
 
 - move hard coded catalog to mongodb, create new endpoint on backend
 - from frontend , get endpoint to dynamically list items to buy
 - add pictures for items to buy
-- show download url
+- show download url (popup)
 - security (can currently read paymentid from smart contract on blockchain)
 
-used:
+### Tech stack used:
 
-backend framework, koa (can use async/await)
+backend web framework: koa (can use async/await)
+React frontend
+Database: MongoDB
 
 ## Testing
 
