@@ -14,9 +14,10 @@ Accepts ERC-20 Stablecoin token (DAI) for payment
 
 ### Tech stack used:
 
-backend web framework: koa (can use async/await)
-React frontend
-Database: MongoDB
+* backend web framework: koa (can use async/await)
+* React frontend
+* Database: MongoDB
+* Audius API - https://audius.org/api , https://docs.audius.org/api/rest-api , https://audiusproject.github.io/api-docs/#audius-api-docs
 
 ## Testing
 
