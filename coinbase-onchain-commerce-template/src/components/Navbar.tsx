@@ -10,6 +10,8 @@ import { ExternalLinkSvg } from 'src/svg/ExternalLinkSvg';
 import { MenuSvg } from 'src/svg/MenuSvg';
 import OnchainKitShopSvg from 'src/svg/OnchainKitShopSvg';
 import type { NavbarLinkReact } from 'src/types';
+import Link from 'next/link';
+
 
 function NavbarLink({ link, label }: NavbarLinkReact) {
   return (
@@ -53,6 +55,7 @@ export default function Navbar() {
           </div>
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
+              <Link href="/audius">Audius</Link>
               <NavbarLink link={TEMPLATE_LINK} label="FORK THIS TEMPLATE" />
               <NavbarLink link={ONCHAINKIT_LINK} label="ONCHAINKIT" />
               <NavbarLink link={TWITTER_LINK} label="X" />
