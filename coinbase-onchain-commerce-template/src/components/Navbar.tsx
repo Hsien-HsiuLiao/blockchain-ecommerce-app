@@ -70,9 +70,15 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+      {/* mobile menu */}
       {isMenuOpen && (
         <div className="bg-[white] md:hidden">
           <ul className="flex flex-col items-start space-y-2 px-4 py-2">
+            <Link href="/audius">
+              <li className={cn('flex cursor-pointer items-center justify-start gap-2 rounded p-1', pressable.default)}>
+                <span className="ock-text-foreground text-xs">Audius</span>
+              </li>
+            </Link>
             <NavbarLink link={TEMPLATE_LINK} label="FORK THIS TEMPLATE" />
             <NavbarLink link={ONCHAINKIT_LINK} label="ONCHAINKIT" />
             <NavbarLink link={GITHUB_LINK} label="GITHUB" />
